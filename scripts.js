@@ -84,22 +84,27 @@ function ask(){
         "dont know. dont care",
         "what are you doing man",
         "frowny face",
-        "fym nuh uh?",
+        "wdym nuh uh?",
         "i hate you and i hate your question. you are hereby banned from using this 8 ball again.",
         "AINTNOWAY",
         "whar?",
         "go ask a real person",
         "go touch grass",
-        "point and laugh at this league player",
+        "point and laugh at this user",
         "thats vile",
         "thats crazy. dont care tho"
     ]
+    let ind = Math.floor(Math.random() * answers.length);
+    document.getElementById('result').innerText = answers[ind];
+    document.getElementById('result').style.fontSize = "10px";
+    document.getElementById("ball").classList.remove('shake');
 }
 
 function submit(event){
     if(event.which === 13){
         if(!event.repeat){
-            ask();
+            document.getElementById("ball").classList.add('shake');
+            setTimeout(ask, 750);
             event.target.value = "";
         }
         event.preventDefault();
