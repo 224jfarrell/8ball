@@ -111,3 +111,10 @@ function submit(event){
     }
 }
 document.getElementById("textarea").addEventListener("keydown", submit);
+
+function click(){
+    console.log("clickerd")
+    document.getElementById("ball").classList.add('shake');
+    setTimeout(ask, 750);
+    document.getElementById("textarea").value = "";
+}
