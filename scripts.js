@@ -103,9 +103,7 @@ function ask(){
 function submit(event){
     if(event.which === 13){
         if(!event.repeat){
-            document.getElementById("ball").classList.add('shake');
-            setTimeout(ask, 750);
-            event.target.value = "";
+            test();
         }
         event.preventDefault();
     }
@@ -113,8 +111,12 @@ function submit(event){
 document.getElementById("textarea").addEventListener("keydown", submit);
 
 function click(){
-    console.log("clickerd")
+    test();
+}
+
+function test(){
     document.getElementById("ball").classList.add('shake');
     setTimeout(ask, 750);
     document.getElementById("textarea").value = "";
 }
+document.getElementById("clickbutton").addEventListener("click", click);
