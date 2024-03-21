@@ -216,3 +216,7 @@ div:not(.container), h1{
     animation-duration: 750ms;
     filter: blur(4px);
 }
+
+.footer {
+    color: white;
+}
